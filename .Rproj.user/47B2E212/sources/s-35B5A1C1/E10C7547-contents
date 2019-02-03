@@ -1,0 +1,23 @@
+name: "Computational tools for language researchers"
+output_dir: "."
+navbar:
+  title: "Computational tools for language researchers"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Tools"
+      href: tools.html
+    - text: "Code basics"
+      href: code_basics.html
+    - text: "Data types"
+      href: data_types.html
+    - text: "Reading and writing"
+      href: reading_writing.html
+    - text: "Visuals"
+      href: visuals.html
+
+output:
+  html_document:
+    theme: cosmo
+    highlight: textmate
+    css: styles.css

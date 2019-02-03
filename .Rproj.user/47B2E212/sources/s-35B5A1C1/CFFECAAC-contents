@@ -1,0 +1,29 @@
+---
+title: "Data types"
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    toc_depth: 4
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+There are many different types of data that can be used in R. There are lists, strings, matrices, dataframes, and many more. You can think of data types as representing different media with which you can solve your unique scientific problem. That is whether it is a small problem (like you have to add a letter to the end of each of the columns in your dataframe) or a big problem (like you have to estimate the effect of letter knowledge on reading skill). In fact, there are no universal primitives for data types. You could create your own special data type in R that suits your need. Nonetheless, there are a bunch of conventional data types. Here I will describe a few.  
+  
+#### Strings
+I start with strings because we are interested in language, and strings are a great way of transparently representing linguistic data. A string (or "character string") is just a sequence of characters that are stored together in memory. Most often in language research these are letters. Strings in R are contained in quotes - both single and double. So, `'Tuolmne'` and `"Tuolumne"` are both character strings, and are equivalent even though one is enveloped in single quotes and the other in double quotes.
+   When strings are strung together with other strings, they form a character vector and they can be assigned to a variable. For example you could specify the following sequence of strings as a character vector represented by the variable char_vec:  
+   
+`char_vec = c('Tuolumne', 'Platte', 'Columbia', 'Kennebec')`
+  
+This says _concatenate_ (the operation specified by `c()`) the character strings 'Tuolumne', 'Platte', 'Columbia', 'Kennebec' into a single variable (a _character vector_) called 'char_vec'. This is useful when you have to store words, names, or other character-based data in your research. We will cover at some other point useful ways of processing strings, including with the use of regular expressions ("regex") and packages designed for string processing (like `stringr` and `stringi`). But for now, just keep in mind that strings are a useful data type to reference language information in a transparent fashion.
+  
+#### Numeric vectors
+
+
+

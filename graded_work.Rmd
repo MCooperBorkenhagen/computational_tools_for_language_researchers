@@ -1,0 +1,59 @@
+---
+title: "Graded Work"
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    toc_depth: 4
+---
+
+
+#### **Overview**  
+
+The final grade is based on the following graded contributions…  
+
+* Two take-home assignments - 15% each
+* Weekly short quizzes (takes place of midterm exam)- 25%
+* Final exam (cumulative, and based on weekly quizzes) - 25%
+* Participation (includes visit with instructor; see below)- 20%
+  
+*About grading on a curve:*  
+Grading will not be based on a curve in the sense that there isn’t a predetermined percentage of people who will receive each grade; in principle, everyone could get an A. If you work hard and follow the guidelines of the course, you should do well. For more information about how to do well and learn a lot, see the page here entitled "How to Learn a Lot"  
+  
+#### **Take-home assignments (15% each)**  
+These assignments are designed to get you applying what you know about language and learning to read in an engaged way with applied problems in education. You then document your work in a paper, which is then what you turn in to be graded. The first take-home assignment will be announced in class on during week 6 and due by the end of week 7.  The second take-home assignment will be announced in class on week 9 and due by the end of week 10.  
+
+#### **Weekly short quizzes (25%)**  
+There will be a short quiz at the end of each week. Think of them as a midterm exam that has been divided into 10 pieces throughout the term.  The purpose of this is to keep you engaged in the intermediate learning throughout the course in a systematic way through producing the most important content each week. This method of learning is based in research sometime known as the testing effect; learning is enhanced through systematically being required to produce the product of learning in an intermediate schedule throughout the course of learning (Halamish & Bjork, 2011; Hattikudur & Postle, 2011). I point this out for two reasons: (1) as a student, it can be helpful to remember the utility of certain aspects of learning that at the time seem like a burdensome chore, and (2) it is important as an educator that you incorporate principles of learning through teaching (in essence, this is the impetus for this course!). The weekly quizzes will tend to fall late in the week, but will be subject to fluctuations in the schedule throughout the term.  The weekly schedule will typically work like this.  
+
+Quiz formats will vary: multiple choice questions, short answer responses, and/or longer answer formats (like answering a single question in a couple of paragraphs).  The goal is for you to get an opportunity to practice learning through testing as well as be provided regular feedback about how well you’ve understood the material.  
+  
+There are 10 quizzes throughout the term, each worth 10 points. The final grade for the quizzes will be the average of the 10 scores. However, your lowest quiz score will be dropped and replaced with the mean for the remaining 9 quizzes. This means that one quiz can be missed “for free”, like this:  A missed quiz gets 0 points.  If you miss only one quiz, that 0 will be used as your lowest score and replaced with the mean of the remaining scores.  
+  
+Otherwise, missed quizzes are treated exactly like other missed exams.  If you know you will be missing class on a quiz day for a valid, academically-related reason, you must notify the professor or TA in advance, document the reason for the absence, and arrange to do a make-up during office hours.  If you miss a quiz-day class for an unexpected reason (illness, emergency, and so on), you can arrange to do a make-up if you provide adequate corroborative documentation.  Casual excuses for missed quizzes will not be viewed favorably.  
+  
+
+#### **Final Exam (25%)**  
+There is a final exam with the same kinds of questions as on the quizzes. It will cover material from the entire course. The exam will be administered the week of finals, with the day, time, and location to be determined.  
+  
+#### **Participation (20%)**  
+The first thing I would like to note is that *you can't get a good grade in this course without participating*. Your participation is lecture enhances your ability to do well, and your participation in sections is essential to doing well (i.e., *it is expected*). It is noticed when you particpate in both settings, so if you apply yourself in this way it will be to your advantage. As a rule of thumb, you should plan on asking at least one question (or submitting one comment) during lecture every week, and you should plan on asking at least one questions every section meeting. Your participation grade is not exclusively based on your raising your hand to ask a question or make a comment, but it is largely based on this. In addition to asking questions, you are also expected to participate in activities in lecture and section. This includes smaller activities ike when you are asked to turn to your neighbor to discuss a topic, and larger activities like group activities conducted during sections. If you are wondering how you are doing in your contribution in this capacity, feel free to ask the instructor. However, this expectation is straightforward: if you are participating regularly, you will know it because you will be doing what is described above.  
+  
+Beyond merely asking questions, the excellent student will engage with the material and this engagement will be evidenced in your questions and comments. Some things that *are* and *are NOT* appreciated in your participation are as follows:  
+
+* Questions and comments that *are* appreciated will:
+    + Demonstrate from the language that you use that you read the material
+    + Show that you stopped to think about what you said for a couple minutes before you contributed
+    + Go beyond what has been said to expand to a new topic in a novel way
+* Those that *are NOT* appreciated might:
+    + Use language in a haphazard or incorrect way (thus demonstrating that you didn't think about what you said very deeply)
+    + Ask a question that was obviously covered in the reading
+    + Ask about something that has already been discussed in the course
+
+
+*About the instructor visit*:  
+One additional activity will also affect the final grade: students are required to come to the professor’s office hours (alone or in a small group) at least once during the first month of class.  This is a way for us to meet each other and to promote communication about the course content and to promote access to the instructor. Two points will be deducted from your participation score (equivalent to two percentage points in the class) if you fail to meet this requirement. Note that this is not a trivial portion of your grade, thus representing easy points for you!  Instructions for how to sign up for a timeslot will be covered in the first week of class. 
+  
+***

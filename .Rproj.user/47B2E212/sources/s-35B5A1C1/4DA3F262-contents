@@ -1,0 +1,36 @@
+---
+title: "Tools"
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    toc_depth: 4
+---
+<div style="margin-bottom:100px;">
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+In order to get started in this course you will need to download and install some software. Follow the steps below to get you to the point that you can start working in R. There are tasks outlined in this site that will require additional software (namely R packages that perform certain tasks), and will be covered at that point. For now, all you need to get started is here - including a description of why you need each of these technologies.
+
+### R
+There are many statistical computing software environments, but we will be using [R](https://www.r-project.org). This computer language is increasingly the most common resource for statistical computing in the language and cognitive sciences. Furthermore, R, is an open source software and is free to all users. Any user can contribute to the libraries that make it famous for statistical computing. R can be downloaded by visiting [r-project.org](https://www.r-project.org), where you can download via the Comprehensive R Archive Network (CRAN), which is a network of institutions that have agreed to host and distribute R for free to interested users. You can download from any host on [the CRAN page](https://cran.r-project.org/mirrors.html), but select a host that is close to where you are performing the download. Once you select a host, download to your machine and place the software in a suitable location.  
+  Note that we will not use the R software using their built in graphical user interface, rather we will install it and it will be operating in the background, where we will be interacting it through a great interface for computing in R called _RStudio_.
+  
+### RStudio
+We will interact with R using a software called RStudio, which is an integrated development environment (IDE) that is optimized with the needs of user of R in mind. It is an incredible asset to users of R. You can use the interface provided by R, but RStudio will help you in many aspect sof your work. [Download RStudio here](https://www.rstudio.com/products/rstudio/), and select the operating system that you work with. You will want to download the desktop version using the open source license (i.e., the free one).
+
+### Packages
+Once you download R and RStudio, you are ready to work on data. In order to do this work, you will need to download _packages_ that are useful to your work. A package is a software that helps you solve some problem - because that's what programming helps us do: _solve problems_. R is installed with a bunch of useful packages right off the bat, but you will discover all sorts of additional packages that are useful to you.
+  A package can be installed in R by using the function `install.packages()` in the console portion of the RStudion IDE. By default the console is located in the lower left corner of RStudio upon installation, shown below indicated with a red arrow.![](./resources/console.png)
+  
+  
+  
+#### Which packages to install  
+Install the packages "tidyverse", "reshape2", "udpipe", and "wordVectors", by running `install.packages('name_of_package')`, for each of these packages. For example, to install the package called "tidyverse", run the following in the console:
+  
+`install.packages('tidyverse')` 
+  
+Notice that the name of the package is encolsed in quotation marks. You can use single- or double-quaotes, each of which designates a string. You'll learn more about that later. 

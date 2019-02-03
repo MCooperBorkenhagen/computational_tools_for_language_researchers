@@ -1,0 +1,28 @@
+---
+title: "Code basics"
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    toc_depth: 4
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Establish your location
+In order to get started, you have to establish your location on your machine. This is due to the fact that R needs to know where to work from while you do your coding. The best way to do this is by generating an R Project in the directory on your computer from which you will do your work. This is done with a .RProj file (i.e., an RProject file). Generally speaking you want directories to be organized with respect to a given project, whether that is a research project or otherwise. More advanced directory structures might have multiple levels of directories, with many .RProj files throughout the directory structure, but we will start simple.
+  
+In order to establish an RProject (.RProj) file, follow File > New Project and specify if you'd like to start your project in an existing directory or a new directory that you would like to create for your project. This will establish a location on your computer from which this RProject will operate from by default. This is equivalent to "setting the working directory", which can be done with the command `setwd()`, or by going to the File pane (lower right by default on install) and clicking More > Set As Working Directory.
+  
+### Start writing code
+Now, in order to solve a problem using code in R, you have to be able to write your code somewhere. There are two places in the RSudio interface you can do this. You can write code directly into the console pane, lower left (red arrow), or you can script in the source pane, upper left (purple arrow).![](./resources/console_source.png) In order to script in the source pane you need to open a new R Script file by following File > New File > R Script. Once you do so, you can save that file with a desirable name. Note that you should name scripts with a short descriptive name so that you can have a sense of what the script does from the name it possesses. Also, when you save that script it should save to the correct directory, if you are working with (and have correctly specified) an RProject (.RProj) file.
+
+### Loading a package
+You've already seen how we install a package using `install.packages()`, in order to use that package you need to load that package so that it is up and running in your environment. There are two functions that do this, either work fine: `require()` or `library()`. For example, to load "tidyverse" in your environment, specify `require(tidyverse)` in either your source or console panes. Note that if you are writing code that you'd like to return to again in the future and rerun it having the same outcome (though this is basically _always_ what we are doing), you would benefit from specifying your `require()` call in the R script itself, so that it saves next time (remember that anything entered directly into console goes away).
+  
+### Saving your place
+Basically, the purpose of working with an RProject file is that it contains the metadata for all of the code for a given project in a single file format so that next time you want to work with that project, you simply open the .RProj file and it correctly points to all the work as you left it off last time. This includes data that you generated, scripts that you were working with, your working directory, and so on. So, when you exit your project, make sure you save your place. Do this simply by clicking "save" in the dialogue box after you close the window of the project you were working on.
