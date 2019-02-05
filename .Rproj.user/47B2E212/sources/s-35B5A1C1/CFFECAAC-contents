@@ -24,6 +24,15 @@ I start with strings because we are interested in language, and strings are a gr
 This says _concatenate_ (the operation specified by `c()`) the character strings 'Tuolumne', 'Platte', 'Columbia', 'Kennebec' into a single variable (a _character vector_) called 'char_vec'. This is useful when you have to store words, names, or other character-based data in your research. We will cover at some other point useful ways of processing strings, including with the use of regular expressions ("regex") and packages designed for string processing (like `stringr` and `stringi`). But for now, just keep in mind that strings are a useful data type to reference language information in a transparent fashion.
   
 #### Numeric vectors
+Numeric vectors are an important type of data, and are used any time you want to group a bunch of numbers together in memory. There will be countless times you will want to do this in your work (though most often you will organize vectors within dataframes or some other larger object, as variables). You can specify a numeric vector by concatenating (i.e., using `c()`) numbers together in a variable as is shown below:  
+  
+  `numeric_vector = c(1, 2, 3, 4, 5)`
+  
+This creates an ordered sequence of numbers consisting of the numbers 1, 2, 3, 4, and 5. Notice that these are not _numerals_ (i.e., they are not _characters_); that would be a character vector, as described above. These are _numbers_ and specify quantities in the form of decimals. They have the abbreviation `num` in the environment pane, and are useful when you need to quantify something in your work. Integers are also encoded as numeric type, though integers specify integers so function slightly differently - for example they cannot be interpreted as decimals.
+
+#### Logical vectors
+Logical vectors are sequences of elements that specify `TRUE` or `FALSE` values.
+A thorough tutorial on _logical indexing_ can be found [here](https://bookdown.org/ndphillips/YaRrr/logical-indexing.html).
 
 
 

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>The basics</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = false;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Computational tools for language researchers</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="the_basics.html">The basics</a>
+</li>
+<li>
+  <a href="visuals.html">Visuals</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">The basics</h1>
+
+</div>
+
+
+<div style="margin-bottom:100px;">
+
+<div id="the-tools-you-need" class="section level1">
+<h1>The tools you need</h1>
+<p>In order to get started in this course you will need to download and install some software. Follow the steps below to get you to the point that you can start working in R. There are tasks outlined in this site that will require additional software (namely R packages that perform certain tasks), and will be covered at that point. For now, all you need to get started is here - including a description of why you need each of these technologies.</p>
+<div id="r" class="section level2">
+<h2>R</h2>
+<p>There are many statistical computing software environments, but we will be using <a href="https://www.r-project.org">R</a>. This computer language is increasingly the most common resource for statistical computing in the language and cognitive sciences. Furthermore, R, is an open source software and is free to all users. Any user can contribute to the libraries that make it famous for statistical computing. R can be downloaded by visiting <a href="https://www.r-project.org">r-project.org</a>, where you can download via the Comprehensive R Archive Network (CRAN), which is a network of institutions that have agreed to host and distribute R for free to interested users. You can download from any host on <a href="https://cran.r-project.org/mirrors.html">the CRAN page</a>, but select a host that is close to where you are performing the download. Once you select a host, download to your machine and place the software in a suitable location.<br />
+Note that we will not use the R software using their built in graphical user interface, rather we will install it and it will be operating in the background, where we will be interacting it through a great interface for computing in R called <em>RStudio</em>.</p>
+</div>
+<div id="rstudio" class="section level2">
+<h2>RStudio</h2>
+<p>We will interact with R using a software called RStudio, which is an integrated development environment (IDE) that is optimized with the needs of user of R in mind. It is an incredible asset to users of R. You can use the interface provided by R, but RStudio will help you in many aspect sof your work. <a href="https://www.rstudio.com/products/rstudio/">Download RStudio here</a>, and select the operating system that you work with. You will want to download the desktop version using the open source license (i.e., the free one).</p>
+</div>
+<div id="packages" class="section level2">
+<h2>Packages</h2>
+<p>Once you download R and RStudio, you are ready to work on data. In order to do this work, you will need to download <em>packages</em> that are useful to your work. A package is a software that helps you solve some problem - because that’s what programming helps us do: <em>solve problems</em>. R is installed with a bunch of useful packages right off the bat, but you will discover all sorts of additional packages that are useful to you. A package can be installed in R by using the function <code>install.packages()</code> in the console portion of the RStudion IDE. By default the console is located in the lower left corner of RStudio upon installation, shown below indicated with a red arrow.<img src="resources/console.png" /></p>
+<div id="which-packages-to-install" class="section level3">
+<h3>Which packages to install</h3>
+<p>Install the packages “tidyverse”, “reshape2”, “udpipe”, and “wordVectors”, by running <code>install.packages('name_of_package')</code>, for each of these packages. For example, to install the package called “tidyverse”, run the following in the console:</p>
+<p><code>install.packages('tidyverse')</code></p>
+<p>Notice that the name of the package is encolsed in quotation marks. You can use single- or double-quaotes, each of which designates a string. You’ll learn more about that later.</p>
+<hr />
+</div>
+</div>
+</div>
+<div id="where-you-do-your-work" class="section level1">
+<h1>Where you do your work</h1>
+<div id="establish-your-location" class="section level2">
+<h2>Establish your location</h2>
+<p>In order to get started, you have to establish your location on your machine. This is due to the fact that R needs to know where to work from while you do your coding. The best way to do this is by generating an R Project in the directory on your computer from which you will do your work. This is done with a .RProj file (i.e., an RProject file). Generally speaking you want directories to be organized with respect to a given project, whether that is a research project or otherwise. More advanced directory structures might have multiple levels of directories, with many .RProj files throughout the directory structure, but we will start simple.</p>
+<p>In order to establish an RProject (.RProj) file, follow File &gt; New Project and specify if you’d like to start your project in an existing directory or a new directory that you would like to create for your project. This will establish a location on your computer from which this RProject will operate from by default. This is equivalent to “setting the working directory”, which can be done with the command <code>setwd()</code>, or by going to the File pane (lower right by default on install) and clicking More &gt; Set As Working Directory.</p>
+<hr />
+</div>
+</div>
+<div id="how-to-get-going" class="section level1">
+<h1>How to get going</h1>
+<div id="start-writing-code" class="section level2">
+<h2>Start writing code</h2>
+<p>Now, in order to solve a problem using code in R, you have to be able to write your code somewhere. There are two places in the RSudio interface you can do this. You can write code directly into the console pane, lower left (red arrow), or you can script in the source pane, upper left (purple arrow).<img src="resources/console_source.png" /> In order to script in the source pane you need to open a new R Script file by following File &gt; New File &gt; R Script. Once you do so, you can save that file with a desirable name. Note that you should name scripts with a short descriptive name so that you can have a sense of what the script does from the name it possesses. Also, when you save that script it should save to the correct directory, if you are working with (and have correctly specified) an RProject (.RProj) file.</p>
+</div>
+<div id="loading-a-package" class="section level2">
+<h2>Loading a package</h2>
+<p>You’ve already seen how we install a package using <code>install.packages()</code>, in order to use that package you need to load that package so that it is up and running in your environment. There are two functions that do this, either work fine: <code>require()</code> or <code>library()</code>. For example, to load “tidyverse” in your environment, specify <code>require(tidyverse)</code> in either your source or console panes. Note that if you are writing code that you’d like to return to again in the future and rerun it having the same outcome (though this is basically <em>always</em> what we are doing), you would benefit from specifying your <code>require()</code> call in the R script itself, so that it saves next time (remember that anything entered directly into console goes away).</p>
+</div>
+<div id="saving-your-place" class="section level2">
+<h2>Saving your place</h2>
+<p>Basically, the purpose of working with an RProject file is that it contains the metadata for all of the code for a given project in a single file format so that next time you want to work with that project, you simply open the .RProj file and it correctly points to all the work as you left it off last time. This includes data that you generated, scripts that you were working with, your working directory, and so on. So, when you exit your project, make sure you save your place. Do this simply by clicking “save” in the dialogue box after you close the window of the project you were working on.</p>
+<hr />
+</div>
+</div>
+<div id="the-material-you-work-with" class="section level1">
+<h1>The material you work with</h1>
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>There are many different types of data that can be used in R. There are lists, strings, matrices, dataframes, and many more. You can think of data types as representing different media with which you can solve your unique scientific problem. That is whether it is a small problem (like you have to add a letter to the end of each of the columns in your dataframe) or a big problem (like you have to estimate the effect of letter knowledge on reading skill). In fact, there are no universal primitives for data types. You could create your own special data type in R that suits your need. Nonetheless, there are a bunch of conventional data types. Here I will describe a few.</p>
+</div>
+<div id="data-types" class="section level2">
+<h2>Data types</h2>
+<p>There are a handful of data types that you will need to understand, then there are corresponding ways of grouping these data together (more on that further down). In this next section we talk about the most common data types, <em>strings</em>, <em>numbers</em> (including <em>integers</em>), <em>logicals</em>, and <em>factors</em>. Additionally, there is discussion about how to organize these data types in a corresponding <em>vector</em>, or a sequence of elements stored together in memory.</p>
+<div id="strings" class="section level3">
+<h3>Strings</h3>
+<p>I start with strings because we are interested in language, and strings are a great way of transparently representing linguistic data. A string (or “character string”) is just a sequence of characters that are stored together in memory. Most often in language research these are letters. Strings in R are contained in quotes - both single and double. So, <code>'Tuolmne'</code> and <code>&quot;Tuolumne&quot;</code> are both character strings, and are equivalent even though one is enveloped in single quotes and the other in double quotes. When strings are strung together with other strings, they form a character vector and they can be assigned to a variable. For example you could specify the following sequence of strings as a character vector represented by the variable char_vec:</p>
+<p><code>char_vector = c('Tuolumne', 'Platte', 'Columbia', 'Kennebec')</code></p>
+<p>This says <em>concatenate</em> (the operation specified by <code>c()</code>) the character strings ‘Tuolumne’, ‘Platte’, ‘Columbia’, ‘Kennebec’ into a single variable (a <em>character vector</em>) called ‘char_vec’. This is useful when you have to store words, names, or other character-based data in your research. We will cover at some other point useful ways of processing strings, including with the use of regular expressions (“regex”) and packages designed for string processing (like <code>stringr</code> and <code>stringi</code>). But for now, just keep in mind that strings are a useful data type to reference language information in a transparent fashion.</p>
+</div>
+<div id="numbers" class="section level3">
+<h3>Numbers</h3>
+<p>Numeric vectors are an important type of data, and are used any time you want to group a bunch of numbers together in memory. There will be countless times you will want to do this in your work (though most often you will organize vectors within dataframes or some other larger object, as variables). You can specify a numeric vector by concatenating (i.e., using <code>c()</code>) numbers together in a variable as is shown below:</p>
+<p><code>numeric_vector = c(1, 2, 3, 4, 5)</code></p>
+<p>This creates an ordered sequence of numbers consisting of the numbers 1, 2, 3, 4, and 5. Notice that these are not <em>numerals</em> (i.e., they are not <em>characters</em>); that would be a character vector, as described above. These are <em>numbers</em> and specify quantities in the form of decimals. They have the abbreviation <code>num</code> in the environment pane, and are useful when you need to quantify something in your work. Integers are also encoded as numeric type, though integers specify integers so function slightly differently - for example they cannot be interpreted as decimals.</p>
+</div>
+<div id="logicals" class="section level3">
+<h3>Logicals</h3>
+<p>Logical vectors are sequences of elements that specify <code>TRUE</code> or <code>FALSE</code> values. This is useful when specifying with regard to another variable associated with the vector whether or not some state of affairs is or is not the case for each corresponding cell in that associated vector. Specifying a logical vector is similar to the other vectors we’ve seen:</p>
+<p><code>logical_vector = c(TRUE, FALSE, TRUE, TRUE, FALSE)</code></p>
+<p>Notice that although this vector looks like a character vector because it contains word-like elements, it is not one. You can tell this because the elements are not enclosed by parentheses. A thorough tutorial on <em>logical indexing</em> can be found <a href="https://bookdown.org/ndphillips/YaRrr/logical-indexing.html">here</a>. They are useful vector types that you will occasionally need in your work.</p>
+<p>Likewise, if you want to read up on what a <em>vector</em> is, see <a href="https://en.wikipedia.org/wiki/Array_data_structure">the Wikipedia page for it</a>. Thir structure varies depending on their use.</p>
+</div>
+<div id="factors" class="section level3">
+<h3>Factors</h3>
+<p>It is important to understand how factors differ from other data types conceptually, because they are largely useful due to this conceptual distinction. Factors are data structures used to express a variable that has some number of discrete levels. For example, if you were to categorize readers in three groups, “low skill”, “medium skill”, and “high skill”, a factor would be the appropriate data type. This three level factor could be expressed transparently as a character vector. But factors, unlike character vectors, imply that there are a limited number of levels of that factor. Functionally, factors will differ from other data types because some functions will be written to handle factors and not some other data type. This will make sense when you experience it, but let’s just say that sometimes you think that everything is going fine and you have trouble with a function and it gets mad at you because you give it a character vector (or numeric vector or whatever) and it really wanted a factor. This is especially common in statistical modeling and plotting, which we will talk about later. Here is how you could specify a factor with similar syntax as before:</p>
+<pre><code>## [1] Tuolumne Platte   Columbia Kennebec
+## Levels: Columbia Kennebec Platte Tuolumne</code></pre>
+<p>Notice that this variable assignment looks almost identical to that of <code>char_vector</code> above, but is a factor not a character string. You can see all the levels of a factor by calling <code>levels()</code> on it. This calls only the unique levels, so if ‘Tuolmne’ was a repeated level, it would only show up once by calling <code>levels()</code></p>
+<pre><code>## [1] &quot;Columbia&quot; &quot;Kennebec&quot; &quot;Platte&quot;   &quot;Tuolumne&quot;</code></pre>
+<pre><code>## [1] &quot;See that &#39;Tuolumne&#39; only appears once&quot;</code></pre>
+<p>Also, factors are stored as vectors so it doesn’t make sense to talk about a “factor vector”; it is implied when you mention factor that it is a sequence of values that hang together.</p>
+</div>
+</div>
+<div id="chunks-of-data" class="section level2">
+<h2>Chunks of data</h2>
+<p>Data are not only stored in vector form in R, but can be grouped together in <em>tabular</em> form. There are various ways of constructing tables of data, and like with data themselves, each type of tabular data in R comes with its own set of tools to work with it (with some common architecture for all). And just like with data, you could create your own new and different way of grouping data together beyond the vector primitive (though most of us do not do this) - it all has to do with what your needs are. Here will will talk about dataframes (<code>data.frame()</code>), matrices (<code>matrix()</code>), and lists (<code>list()</code>).</p>
+<div id="dataframes" class="section level3">
+<h3>Dataframes</h3>
+<p>Dataframes are useful for many reasons. One of these reasons is that it allows you to group variables together in one data object where the variables are different types of data. You’ll find that as someone who works with language you will often want to do this. For example, perhaps you have data for a bunch of words and you want to understand the relationship of those words and the other variables associated with them. For example, take the example below.</p>
+<hr />
+<hr />
+<p>Click <a href="&#39;the_basics.Rmd&#39;">here</a> to download this file as an RMarkdown file to use interactively in RStudio.</p>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

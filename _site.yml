@@ -5,14 +5,8 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "Tools"
-      href: tools.html
-    - text: "Code basics"
-      href: code_basics.html
-    - text: "Data types"
-      href: data_types.html
-    - text: "Reading and writing"
-      href: reading_writing.html
+    - text: "The basics"
+      href: the_basics.html
     - text: "Visuals"
       href: visuals.html
 
