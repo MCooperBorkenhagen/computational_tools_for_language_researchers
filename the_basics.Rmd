@@ -107,7 +107,7 @@ Also, factors are stored as vectors so it doesn't make sense to talk about a "fa
 Data are not only stored in vector form in R, but can be grouped together in _tabular_ form. There are various ways of constructing tables of data, and like with data themselves, each type of tabular data in R comes with its own set of tools to work with it (with some common architecture for all). And just like with data, you could create your own new and different way of grouping data together beyond the vector primitive (though most of us do not do this) - it all has to do with what your needs are. Here will will talk about dataframes (`data.frame()`), matrices (`matrix()`), and lists (`list()`). 
 
 ### Dataframes
-Dataframes are useful for many reasons. One of these reasons is that it allows you to group variables together in one data object where the variables are different types of data. You'll find that as someone who works with language you will often want to do this. For example, perhaps you have data for a bunch of words and you want to understand the relationship of those words and the other variables associated with them. For example, take the example below.
+Dataframes are useful for many reasons. One of these reasons is that it allows you to group variables together in one data object where the variables are different types of data. You'll find that as someone who works with language you will often want to do this. For example, perhaps you have data for a bunch of words and you want to understand the relationship of those words and the other variables associated with them. Download a data set of this type [here](https://drive.google.com/file/d/1xMu75iJNLkcAOQLP37CJAtDKY4uL4Fy2/view?usp=sharing).
 
 ```{r}
 
